@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{04E0B8B1-D6E6-442D-8807-8F18D996B9A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OP_Car_Dealer</RootNamespace>
+    <AssemblyName>OP Car Dealer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.29\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminBrandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminBrandForm.Designer.cs">
+      <DependentUpon>AdminBrandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminCarsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminCarsForm.Designer.cs">
+      <DependentUpon>AdminCarsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminInboxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminInboxForm.Designer.cs">
+      <DependentUpon>AdminInboxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminOrdersForm.Designer.cs">
+      <DependentUpon>AdminOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminRegisterForm.Designer.cs">
+      <DependentUpon>AdminRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminReportsForm.Designer.cs">
+      <DependentUpon>AdminReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminTransactionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFormPanels\AdminTransactionsForm.Designer.cs">
+      <DependentUpon>AdminTransactionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFormPanels\Inbox\InboxDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFormPanels\Inbox\InboxDetail.Designer.cs">
+      <DependentUpon>InboxDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\NeonNumericUpDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\NeonNumericUpDown.Designer.cs">
+      <DependentUpon>NeonNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\NeonTextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\NeonTextbox.Designer.cs">
+      <DependentUpon>NeonTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnection.cs" />
+    <Compile Include="DealerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerForm.Designer.cs">
+      <DependentUpon>DealerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerFormPanels\DealerCatalogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerFormPanels\DealerCatalogForm.Designer.cs">
+      <DependentUpon>DealerCatalogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerFormPanels\DealerInspectionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerFormPanels\DealerInspectionsForm.Designer.cs">
+      <DependentUpon>DealerInspectionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerFormPanels\DealerOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerFormPanels\DealerOrdersForm.Designer.cs">
+      <DependentUpon>DealerOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerFormPanels\DealerReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerFormPanels\DealerReportsForm.Designer.cs">
+      <DependentUpon>DealerReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerFormPanels\DealerTransactionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerFormPanels\DealerTransactionsForm.Designer.cs">
+      <DependentUpon>DealerTransactionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerFormPanels\Inspection\InspectionCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerFormPanels\Inspection\InspectionCreate.Designer.cs">
+      <DependentUpon>InspectionCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerFormPanels\Inspection\InspectionDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerFormPanels\Inspection\InspectionDetail.Designer.cs">
+      <DependentUpon>InspectionDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerFormPanels\Order_Item\OrderedItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerFormPanels\Order_Item\OrderedItem.Designer.cs">
+      <DependentUpon>OrderedItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reporttransaksi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporttransaksi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="transaksimobil.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>transaksimobil.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFormPanels\AdminBrandForm.resx">
+      <DependentUpon>AdminBrandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFormPanels\AdminCarsForm.resx">
+      <DependentUpon>AdminCarsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFormPanels\AdminInboxForm.resx">
+      <DependentUpon>AdminInboxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFormPanels\AdminOrdersForm.resx">
+      <DependentUpon>AdminOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFormPanels\AdminRegisterForm.resx">
+      <DependentUpon>AdminRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFormPanels\AdminReportsForm.resx">
+      <DependentUpon>AdminReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFormPanels\AdminTransactionsForm.resx">
+      <DependentUpon>AdminTransactionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFormPanels\Inbox\InboxDetail.resx">
+      <DependentUpon>InboxDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\NeonNumericUpDown.resx">
+      <DependentUpon>NeonNumericUpDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\NeonTextbox.resx">
+      <DependentUpon>NeonTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerForm.resx">
+      <DependentUpon>DealerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerFormPanels\DealerCatalogForm.resx">
+      <DependentUpon>DealerCatalogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerFormPanels\DealerInspectionsForm.resx">
+      <DependentUpon>DealerInspectionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerFormPanels\DealerOrdersForm.resx">
+      <DependentUpon>DealerOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerFormPanels\DealerReportsForm.resx">
+      <DependentUpon>DealerReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerFormPanels\DealerTransactionsForm.resx">
+      <DependentUpon>DealerTransactionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerFormPanels\Inspection\InspectionCreate.resx">
+      <DependentUpon>InspectionCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerFormPanels\Inspection\InspectionDetail.resx">
+      <DependentUpon>InspectionDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerFormPanels\Order_Item\OrderedItem.resx">
+      <DependentUpon>OrderedItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reporttransaksi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporttransaksi.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transaksimobil.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>transaksimobil.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\logout_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\image-loading-failed-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
